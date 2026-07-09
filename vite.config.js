@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import dns from 'dns';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import basicSsl from '@vitejs/plugin-basic-ssl';
 import viteCompression from 'vite-plugin-compression';
 import { visualizer } from 'rollup-plugin-visualizer';
 import unusedCode from 'vite-plugin-unused-code';

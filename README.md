@@ -77,14 +77,12 @@ Start the development server:
 npm run dev
 ```
 
-The application is served over HTTPS at:
+The application is served over HTTP at:
 
 ```text
-https://localhost:5173
+http://localhost:5173
 ```
 
-The browser may display a warning because the development server uses a local
-self-signed certificate.
 
 ## Type checking
 

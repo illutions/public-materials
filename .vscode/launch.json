@@ -5,7 +5,7 @@
         "type": "chrome",
         "request": "launch",
         "name": "Debug Website",
-        "url": "https://localhost:5173",
+        "url": "http://localhost:5173",
         "enableContentValidation": false,
         "webRoot": "${workspaceFolder}",
         "trace": true,
