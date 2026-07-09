@@ -25,7 +25,6 @@ export default defineConfig({
   css: false,
 
   plugins: [
-    basicSsl(),
     unusedCode({
       patterns: ['src/**/*.*'],
     }),

@@ -1,5 +1,5 @@
 {
-  "name": "public-materials",
+  "name": "public-app",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,7 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "illutions": "~0.22.0",
+    "illutions": "~0.22.1",
     "three": "~0.185.1",
     "xstate": "~5.31.1"
   },

@@ -4,12 +4,10 @@ import { cfg } from 'illutions';
 cfg.orbitCtrls.enable = true;
 cfg.orbitCtrls.autoRotate = true;
 cfg.orbitCtrls.autoRotateSpeed = 0.1;
-cfg.orbitCtrls.maxDistance = 2;
-cfg.orbitCtrls.minDistance = 0.75;
 cfg.orbitCtrls.rotateSpeed = 0.5
 cfg.orbitCtrls.enableDamping = true
 cfg.orbitCtrls.dampingFactor = 0.025
-cfg.orbitCtrls.zoomSpeed = 0.25;
+cfg.orbitCtrls.enableZoom = false;
 cfg.orbitCtrls.enablePan = false;
 
 // Load GLTF/GLB model
@@ -23,12 +21,7 @@ cfg.envCtrls.environmentIntensity = 0.9
 cfg.envCtrls.backgroundIntensity = 0.9;
 cfg.envCtrls.rotation.y = 172
 
-cfg.post.aa.mode = 'fxaa';
-
-cfg.post.ssao.enable = true;
-
-// Set rendering backend
-cfg.render.api = 'auto';
-cfg.render.webgl.parameters.antialias = true;
+// Set antialias
+cfg.render.params.aa = true;
 
 export { cfg };

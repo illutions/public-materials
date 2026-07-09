@@ -1,22 +1,25 @@
-# Illutions Engine Orbit Controls Example
+# Illutions Engine Materials Example
 
 Build interactive browser-based 3D experiences with a compact,
-configuration-driven TypeScript setup. This example combines an animated camera,
-a production-ready 3D asset, realistic environment lighting, and live controls
-in just a few lines of Illutions Engine configuration.
+configuration-driven TypeScript setup. This example presents a detailed
+sculpture model with five material samples, realistic EXR environment lighting,
+post-processing, and live runtime controls in just a few lines of Illutions
+Engine configuration.
 
 ## Live demo
 
-[![Illutions Engine Orbit Controls example](.github/assets/orbit-controls-preview.png)](https://illutions.github.io/public-materials/)
+[![Illutions Engine Materials example](.github/assets/screenshot.png)](https://illutions.github.io/public-materials/)
 
 **[Launch the interactive demo](https://illutions.github.io/public-materials/)**
-and drag, zoom, or pan around the camera.
+and inspect the model, lighting, and material response.
 
 ## What this example demonstrates
 
-- Smooth orbit controls with automatic camera rotation and configurable limits
-- Direct GLTF/GLB model loading and EXR environment lighting
+- Direct GLTF/GLB model loading with a detailed public-domain sculpture asset
+- Five camera-relative material samples for comparing surface response
+- EXR environment lighting with float loading for high-dynamic-range reflections
 - Antialiased WebGL rendering configured through TypeScript
+- SSAO post-processing for grounded contact and depth cues
 - Runtime controls for inspecting and tuning the experience
 - A focused project structure that is easy to use as a starting point
 
@@ -135,21 +138,22 @@ while local development continues to use the domain root `/`.
 Third-party assets remain subject to their respective licenses. They are not
 relicensed by this repository or by the illutions Engine license.
 
-### Argus Camera
+### Loewe
 
-This example uses the [Argus Camera](https://sketchfab.com/3d-models/argus-camera-f9112ea4c15043ebbb24fa121ffef920)
-model published by Virtual Museums of Małopolska.
+This example uses the [Loewe](https://sketchfab.com/3d-models/lowe-3396c1f61742469ea956b1320d22eb95)
+model published by noe-3d.at.
 
 The model is available under the Creative Commons CC0 1.0 Universal license.
+The Sketchfab source page also marks the model as NoAI.
 
-### Brown Photostudio 02
+### Piazza San Marco
 
-This example uses the Brown Photostudio 02 HDRI from Poly Haven.
+This example uses the Piazza San Marco HDRI from Poly Haven.
 
-- **Author:** Sergej Majboroda
+- **Authors:** Greg Zaal and Rico Cilliers
 - **License:** Creative Commons CC0 1.0 Universal
 - **License URL:** https://creativecommons.org/publicdomain/zero/1.0/
-- **Source:** https://polyhaven.com/a/brown_photostudio_02
+- **Source:** https://polyhaven.com/a/piazza_san_marco
 - **Changes:** No changes made. The HDRI is used as the scene environment.
 
 CC0 permits copying, modification, redistribution, and commercial use without
