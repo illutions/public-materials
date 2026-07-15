@@ -1,0 +1,18 @@
+.license-link {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 1rem);
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1;
+  opacity: 0.85;
+  transition: opacity 160ms ease;
+}
+
+.license-link:hover {
+  text-decoration: underline;
+  opacity: 1;
+}

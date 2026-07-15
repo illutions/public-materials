@@ -22,15 +22,17 @@ relicense:
 - illutions-provided build tooling, including build.js;
 - license files, license tokens, or other files in the license/ directory;
 - illutions names, logos, trademarks, or other branding; or
-- third-party software, models, environment maps, images, or other assets.
+- third-party software, models, environment maps, images, audio recordings, or
+  other assets.
 
 The illutions Engine and illutions-provided build tooling are proprietary
 software and are licensed separately under the terms provided with the
 illutions package.
 
 Third-party materials remain subject to their respective licenses. Applicable
-notices and sources are listed in README.md and, for bundled dependencies, in
-dist/licenses.md when a production build is created.
+asset notices and sources are listed in
+[LICENSE_ASSETS.md](public/LICENSE_ASSETS.md). Bundled software dependency
+licenses are generated in dist/licenses.md during production builds.
 
 3. No Warranty
 

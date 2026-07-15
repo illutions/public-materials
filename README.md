@@ -1,10 +1,7 @@
 # Illutions Engine Materials Example
 
-Build interactive browser-based 3D experiences with a compact,
-configuration-driven TypeScript setup. This example presents a detailed
-sculpture model with five material samples, realistic EXR environment lighting,
-post-processing, and live runtime controls in just a few lines of Illutions
-Engine configuration.
+This example presents a detailed sculpture model with five material samples, realistic EXR environment lighting,
+post-processing, and live runtime controls in just a few lines of Illutions Engine configuration.
 
 ## Live demo
 
@@ -83,7 +80,6 @@ The application is served over HTTP at:
 http://localhost:5173
 ```
 
-
 ## Type checking
 
 ```bash
@@ -133,29 +129,9 @@ while local development continues to use the domain root `/`.
 
 ## Third-party assets
 
-Third-party assets remain subject to their respective licenses. They are not
-relicensed by this repository or by the illutions Engine license.
-
-### Loewe
-
-This example uses the [Loewe](https://sketchfab.com/3d-models/lowe-3396c1f61742469ea956b1320d22eb95)
-model published by noe-3d.at.
-
-The model is available under the Creative Commons CC0 1.0 Universal license.
-The Sketchfab source page also marks the model as NoAI.
-
-### Piazza San Marco
-
-This example uses the Piazza San Marco HDRI from Poly Haven.
-
-- **Authors:** Greg Zaal and Rico Cilliers
-- **License:** Creative Commons CC0 1.0 Universal
-- **License URL:** https://creativecommons.org/publicdomain/zero/1.0/
-- **Source:** https://polyhaven.com/a/piazza_san_marco
-- **Changes:** No changes made. The HDRI is used as the scene environment.
-
-CC0 permits copying, modification, redistribution, and commercial use without
-requiring attribution. The source is listed here for transparency and credit.
+Third-party assets remain subject to their respective licenses. See
+[Asset Licenses](public/LICENSE_ASSETS.md) for authors, sources, license terms,
+and bundled-file details.
 
 ## Project structure
 
