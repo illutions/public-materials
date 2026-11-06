@@ -1,13 +1,14 @@
 import { App } from 'illutions';
+
+// Define the static settings used when the app starts
 import { cfg } from './cfg';
-import { Camera } from './objs/camera';
+// Import the asset definitions
+import { comps } from './comps';
 
-const classes = {
-  objs3D: {
-    Camera,
-  },
-};
+// For typed access to components and engine systems.
+export type MyApp = App<typeof comps>;
 
+// Start the app when the page is ready
 document.addEventListener('DOMContentLoaded', () => {
-  App.run(cfg, classes);
+  App.run(cfg, comps);
 }); 

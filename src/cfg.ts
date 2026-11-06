@@ -1,32 +1,64 @@
-import { cfg } from 'illutions';
+import { setCfg, degToRad } from 'illutions';
 
-// Show helpers
-cfg.gui.infoBox.enable = true;
-cfg.gui.inspector.enable = true;
+export const cfg = setCfg({
+  // Display runtime information and editable settings
+  gui: {
+    infoBox: {
+      enable: true,
+    },
+    inspector: {
+      enable: true,
+    },
+  },
 
-// Set how camera rotates, pans and zooms around a target
-cfg.orbitCtrls.enable = true;
-cfg.orbitCtrls.autoRotate = true;
-cfg.orbitCtrls.autoRotateSpeed = 0.1;
-cfg.orbitCtrls.rotateSpeed = 0.5
-cfg.orbitCtrls.enableDamping = true
-cfg.orbitCtrls.dampingFactor = 0.025
-cfg.orbitCtrls.enableZoom = false;
-cfg.orbitCtrls.enablePan = false;
+  // Load the Draco-compressed material showcase
+  model: {
+    file: ['scene/materials-low.glb', 'scene/materials-med.glb', 'scene/materials-high.glb'],
+    compress: {
+      mesh: 'draco',
+    },
+  },
 
-// Load GLTF/GLB model
-cfg.model.file = 'scene/materials.glb';
-cfg.model.compress.mesh = 'draco'
+  // Light the materials with selectable EXR environments
+  envCtrls: {
+    enable: true,
+    map: ['scene/piazza_san_marco_512.exr', 'scene/piazza_san_marco_4k.exr'],
+    dataType: 'float',
+    environmentIntensity: 0.9,
+    backgroundIntensity: 0.9,
+    rotation: {
+      y: degToRad(172),
+    },
+  },
 
-// Set scene environment map
-cfg.envCtrls.enable = true;
-cfg.envCtrls.map = ['scene/piazza_san_marco_512.exr', 'scene/piazza_san_marco_4k.exr'];
-cfg.envCtrls.dataType = 'float';
-cfg.envCtrls.environmentIntensity = 0.9
-cfg.envCtrls.backgroundIntensity = 0.9;
-cfg.envCtrls.rotation.y = 172
+  // Slowly orbit the camera without zooming or panning
+  orbitCtrls: {
+    enable: true,
+    autoRotate: true,
+    autoRotateSpeed: 0.1,
+    rotateSpeed: 0.5,
+    enableDamping: true,
+    dampingFactor: 0.025,
+    enableZoom: false,
+    enablePan: false,
+  },
 
-// Set antialias
-cfg.render.params.aa = true;
+  render: {
+    // Configure renderer profiles
+    profile: {
+      webgpu: {
+        msaa: 'render',
+        aa: 'fxaa',
+      },
+      webgl: {
+        msaa: 'render',
+        aa: 'fxaa',
+      },
+    },
+  },
 
-export { cfg };
+  // Log all messages to the console.
+  debug: {
+    log: 'all',
+  },
+});
