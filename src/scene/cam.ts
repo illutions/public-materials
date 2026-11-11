@@ -1,16 +1,20 @@
 import { PerspCam3D } from 'illutions';
-
-// Keep these comparison spheres fixed in the camera view
-const CAMERA_LOCKED_OBJECTS = ['Sphere1', 'Sphere2', 'Sphere3', 'Sphere4', 'Sphere5'];
+import type { MyApp } from '../index';
 
 export class Cam extends PerspCam3D {
+  declare public comps: MyApp['comps'];
+
   // Called once after the GLTF model has been loaded and traversed
   protected override onReady(): void {
     // Attach the spheres while preserving their current world transforms
-    for (const name of CAMERA_LOCKED_OBJECTS) {
-      const obj = this.scene.obj.getObjectByName(name);
-      if (!obj) continue;
-      this.obj.attach(obj);
+    for (const sphere of [
+      this.comps.scene.sphere1,
+      this.comps.scene.sphere2,
+      this.comps.scene.sphere3,
+      this.comps.scene.sphere4,
+      this.comps.scene.sphere5,
+    ]) {
+      this.obj.attach(sphere.obj);
     }
   }
 }
